@@ -1,0 +1,28 @@
+const display = document.getElementById("display");
+
+function appendToDisplay(input) {
+    display.value += input;
+}
+
+function calculate() {
+    try {
+        display.value = eval(display.value);
+    }
+    catch(error) {
+        display.value = "Error";
+    }
+}
+
+function clearDisplay() {
+    display.value = "";
+}
+
+function backSpace() {
+    display.value = display.value.slice(0,-1);
+}
+
+function backspace() {
+    var displayValue = display.value;
+    var newValue = displayValue.substring(0, displayValue.length-1);
+    display.value = newValue;
+}
